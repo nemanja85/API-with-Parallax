@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (window.scrollY > 170) {
       const usersDiv = document.querySelectorAll('.items');
       for (let i = 0; i < usersDiv.length; i++) {
-
         usersDiv[i].classList.add('animate__animated', 'animate__fadeIn');
         usersDiv[i].classList.remove('invisible');
       }
@@ -61,7 +60,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   for (let index = 0; index < users.length; index++) {
     let user = users[index];
 
-    delay += 800;
+    delay += 400;
     output += UserCard(user, delay);
   }
 
