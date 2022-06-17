@@ -19,8 +19,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   });
 
-  let users = [];
-
   // define function to fetch users
   async function getUsers(perPage = 9) {
     const apiUrl = `https://reqres.in/api/users?per_page=${perPage}`;
@@ -49,7 +47,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       </div>`;
   }
 
-  users = await getUsers();
+  let users = await getUsers();
   // Cashing data
   sessionStorage.setItem('users', JSON.stringify(users));
 
